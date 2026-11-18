@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!--
+    Demo Barbershop — одна страница, без сборки.
+    Текст страницы меняйте здесь.
+    Цвета и шрифт — в style.css (блок :root).
+    Номер WhatsApp — только в script.js, константа WHATSAPP_NUMBER.
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demo Barbershop — барбершоп в Бишкеке</title>
+  <meta name="description" content="Демо-страница вымышленного барбершопа Demo Barbershop в Бишкеке: услуги, цены в сомах и запись через WhatsApp.">
+  <meta name="theme-color" content="#12141a">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2312141a'/%3E%3Cpath d='M8 22V10h3.2l4.8 7.2L20.8 10H24v12h-2.8v-7.1L17.2 22h-2.4l-3.9-7.1V22H8z' fill='%23ff5c39'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Один шрифт. Чтобы сменить — замените семейство здесь и --font в style.css. -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#content">К содержанию</a>
+
+  <!-- Шапка. Название, три ссылки и кнопка WhatsApp. Номер подставит script.js. -->
+  <header class="site-header">
+    <div class="wrap header-bar">
+      <a class="logo" href="#content">
+        Demo Barbershop
+        <span class="demo-mark">Demo</span>
+      </a>
+      <nav class="site-nav" aria-label="Разделы страницы">
+        <a href="#services">Услуги</a>
+        <a href="#booking">Запись</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a class="btn btn-primary header-wa" data-wa-text="Здравствуйте! Хочу записаться в Demo Barbershop." aria-label="Написать в WhatsApp">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
+          <path fill="currentColor" d="M5 6.4A3.4 3.4 0 0 1 8.4 3h7.2A3.4 3.4 0 0 1 19 6.4v6.2a3.4 3.4 0 0 1-3.4 3.4H12l-4.4 2.6a.7.7 0 0 1-1.06-.6v-2a3.4 3.4 0 0 1-1.54-2.86V6.4Z"/>
+        </svg>
+        Написать в WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <main id="content">
+    <!-- Первый экран: заголовок, одна строка пояснения, две кнопки. -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <p class="kicker">Бишкек</p>
+        <h1 id="hero-title">Ровная стрижка к вашему часу</h1>
+        <p class="lede">Запись в WhatsApp, цены в сомах.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-wa-text="Здравствуйте! Хочу записаться в Demo Barbershop." aria-label="Написать в WhatsApp">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
+              <path fill="currentColor" d="M5 6.4A3.4 3.4 0 0 1 8.4 3h7.2A3.4 3.4 0 0 1 19 6.4v6.2a3.4 3.4 0 0 1-3.4 3.4H12l-4.4 2.6a.7.7 0 0 1-1.06-.6v-2a3.4 3.4 0 0 1-1.54-2.86V6.4Z"/>
+            </svg>
+            Написать в WhatsApp
+          </a>
+          <a class="btn btn-secondary" href="#services">Смотреть услуги</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги и цены. Суммы в сомах (KGS) правьте в карточках ниже. -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <h2 id="services-title">Услуги и цены</h2>
+        <p class="section-lead">Шесть работ. Сумма на карточке — окончательная.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Мужская стрижка</h3>
+            <p>Фейд или классика, машинка и ножницы.</p>
+            <p class="price"><span class="price-value">900</span> <span class="price-currency">сом</span></p>
+          </article>
+          <article class="card">
+            <h3>Стрижка и борода</h3>
+            <p>Волосы и борода за один визит.</p>
+            <p class="price"><span class="price-value">1400</span> <span class="price-currency">сом</span></p>
+          </article>
+          <article class="card">
+            <h3>Моделирование бороды</h3>
+            <p>Контур, длина и чистое бритьё шеи.</p>
+            <p class="price"><span class="price-value">700</span> <span class="price-currency">сом</span></p>
+          </article>
+          <article class="card">
+            <h3>Бритьё</h3>
+            <p>Опасная бритва и горячее полотенце.</p>
+            <p class="price"><span class="price-value">800</span> <span class="price-currency">сом</span></p>
+          </article>
+          <article class="card">
+            <h3>Детская стрижка</h3>
+            <p>До 12 лет, в спокойном темпе.</p>
+            <p class="price"><span class="price-value">600</span> <span class="price-currency">сом</span></p>
+          </article>
+          <article class="card">
+            <h3>Укладка</h3>
+            <p>Сушим и укладываем под ваш день.</p>
+            <p class="price"><span class="price-value">400</span> <span class="price-currency">сом</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- «Почему мы»: четыре коротких пункта. Иконки — простые inline SVG. -->
+    <section class="section section-alt" id="why" aria-labelledby="why-title">
+      <div class="wrap">
+        <h2 id="why-title">Почему мы</h2>
+        <ul class="reasons">
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <circle cx="12" cy="12" r="8.25" fill="none" stroke="currentColor" stroke-width="1.75"/>
+              <path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Своё время</h3>
+            <p>Записываем на час, а не в живую очередь.</p>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path d="M4.5 12.2 11.2 5h7.3v7.3l-6.8 7.2-7.2-7.3Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+              <circle cx="15.2" cy="8.4" r="1.05" fill="currentColor"/>
+            </svg>
+            <h3>Цена заранее</h3>
+            <p>Сумма на карточке не меняется в кресле.</p>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path d="M12 3.5 19 6.5v5.2c0 4-2.7 6.7-7 8.3-4.3-1.6-7-4.3-7-8.3V6.5L12 3.5Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+              <path d="M8.8 12.1 11 14.2l4.3-4.4" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <h3>Чистое место</h3>
+            <p>Свежее полотенце и обработанный инструмент каждому.</p>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" width="28" height="28">
+              <path d="M12 21s6-5.1 6-10a6 6 0 1 0-12 0c0 4.9 6 10 6 10Z" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/>
+              <circle cx="12" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.75"/>
+            </svg>
+            <h3>Легко найти</h3>
+            <p>Один адрес в Бишкеке и ссылка на карту ниже.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--
+      Галерея. Сейчас стоят заглушки placehold.co.
+      Замените src на свои фото и поправьте alt под реальный кадр.
+    -->
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <h2 id="gallery-title">Галерея</h2>
+        <div class="gallery-grid">
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%A4%D0%B5%D0%B9%D0%B4" width="800" height="1000" alt="Короткая мужская стрижка с плавным фейдом на затылке" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%91%D0%BE%D1%80%D0%BE%D0%B4%D0%B0" width="800" height="1000" alt="Аккуратная форма бороды после оформления контура" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%9A%D0%BB%D0%B0%D1%81%D1%81%D0%B8%D0%BA%D0%B0" width="800" height="1000" alt="Классическая мужская стрижка с боковым пробором" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%9A%D1%80%D0%B5%D1%81%D0%BB%D0%BE" width="800" height="1000" alt="Барберское кресло и зеркало в зале" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%94%D0%B5%D1%82%D1%8F%D0%BC" width="800" height="1000" alt="Детская стрижка в кресле барбера" loading="lazy" decoding="async">
+          </figure>
+          <figure>
+            <img src="https://placehold.co/800x1000/1c1f29/ff5c39/png?text=%D0%A3%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0" width="800" height="1000" alt="Укладка коротких волос после стрижки" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма не отправляет данные на сервер: script.js собирает текст и открывает WhatsApp. -->
+    <section class="section section-alt" id="booking" aria-labelledby="booking-title">
+      <div class="wrap booking-layout">
+        <div>
+          <h2 id="booking-title">Запись</h2>
+          <p class="section-lead">Имя, телефон и удобное время откроются в WhatsApp готовым сообщением.</p>
+        </div>
+        <form id="booking-form" class="booking-form">
+          <label>
+            <span>Имя</span>
+            <input name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Асан">
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="0555 123 456">
+          </label>
+          <label class="field-wide">
+            <span>Удобное время</span>
+            <input name="time" type="text" required maxlength="80" placeholder="Суббота, после 15:00">
+          </label>
+          <button class="btn btn-primary field-wide" type="submit" aria-label="Записаться в WhatsApp">
+            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
+              <path fill="currentColor" d="M5 6.4A3.4 3.4 0 0 1 8.4 3h7.2A3.4 3.4 0 0 1 19 6.4v6.2a3.4 3.4 0 0 1-3.4 3.4H12l-4.4 2.6a.7.7 0 0 1-1.06-.6v-2a3.4 3.4 0 0 1-1.54-2.86V6.4Z"/>
+            </svg>
+            Записаться в WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Контакты. Адрес, часы, кнопка 2GIS и отдельная ссылка на карту. -->
+    <section class="section" id="contacts" aria-labelledby="contacts-title">
+      <div class="wrap contacts-layout">
+        <div>
+          <h2 id="contacts-title">Контакты</h2>
+          <address>
+            Demo Barbershop<br>
+            г. Бишкек, мкр. Демо, д. 1
+          </address>
+          <p class="hours">Пн–Вс, 10:00–21:00</p>
+        </div>
+        <div class="contact-actions">
+          <!-- Подставьте ссылку на карточку заведения в 2GIS. -->
+          <a class="btn btn-primary" href="https://2gis.kg/bishkek/search/Demo%20Barbershop" target="_blank" rel="noopener noreferrer">Открыть в 2GIS</a>
+          <a class="text-link" href="https://www.openstreetmap.org/#map=15/42.8746/74.5698" target="_blank" rel="noopener noreferrer">Смотреть на карте</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Подвал: метка Demo, ещё одна кнопка WhatsApp и пометка «Демо-страница». -->
+  <footer class="site-footer">
+    <div class="wrap footer-bar">
+      <p class="footer-brand">Demo Barbershop <span class="demo-mark">Demo</span></p>
+      <a class="btn btn-primary" data-wa-text="Здравствуйте! Хочу записаться в Demo Barbershop." aria-label="Написать в WhatsApp">
+        <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" width="20" height="20">
+          <path fill="currentColor" d="M5 6.4A3.4 3.4 0 0 1 8.4 3h7.2A3.4 3.4 0 0 1 19 6.4v6.2a3.4 3.4 0 0 1-3.4 3.4H12l-4.4 2.6a.7.7 0 0 1-1.06-.6v-2a3.4 3.4 0 0 1-1.54-2.86V6.4Z"/>
+        </svg>
+        Написать в WhatsApp
+      </a>
+      <p class="demo-note">Демо-страница</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
